@@ -3,14 +3,14 @@ title: "Blog"
 ---
 
 # My Blog
-## SQL Joins Demystified: INNER, LEFT, and OUTER in Action
+# SQL Joins Demystified: INNER, LEFT, and OUTER in Action
 
-### Problem Statement
+## Problem Statement
 In data science, combining data from multiple tables is common, but choosing the wrong SQL join can lead to incomplete or misleading results. This tutorial helps students understand how INNER, LEFT, and FULL OUTER joins affect outcomes when merging tables (e.g., customers and orders), and guides on selecting the right join for analysis tasks.
 
-### Key Steps/Sections
-#### 1. Setup: Two Simple Tables
-Let's start with two basic tables to illustrate joins. Imagine we have a customers table (with customer details) and an orders table (with purchase records). We'll use a primary key (customer_id) in customers that acts as a foreign key in orders.
+## Key Steps/Sections
+### 1. Setup: Two Simple Tables
+Let's start with two basic tables to illustrate joins. Imagine we have a customers table (with customer details) and an orders table (with purchase records). We'll use a primary key (`customer_id`) in customers that acts as a foreign key in orders.
 For this static tutorial, we'll define the tables directly as Markdown tables below. In a real SQL environment (like SQLite, MySQL, or PostgreSQL), you would create these tables using CREATE TABLE and INSERT statements.
 
 **Customers Table:**
@@ -33,8 +33,8 @@ For this static tutorial, we'll define the tables directly as Markdown tables be
 | 104      | 6           | Monitor  | 200.0  |
 | 105      | 3           | Keyboard | 50.0   |
 
-#### 2. INNER JOIN: Matching Only
-An INNER JOIN returns only rows where there's a match in both tables based on the join condition (e.g., customer_id).
+### 2. INNER JOIN: Matching Only
+An INNER JOIN returns only rows where there's a match in both tables based on the join condition (e.g., `customer_id`).
 
 ```
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
@@ -53,8 +53,8 @@ INNER JOIN orders o ON c.customer_id = o.customer_id;
 
 Notice: Only matched customers (1,2,3) appear; Dana (4), Eve (5), and the unmatched order (104 for customer 6) are excluded.
 
-#### LEFT JOIN: Keep All from Left
-A LEFT JOIN keeps all rows from the left table (customers), with matching rows from the right (orders). Unmatched right-side columns get NULL.
+### 3. LEFT JOIN: Keep All from Left
+A LEFT JOIN keeps all rows from the left table (`customers`), with matching rows from the right (`orders`). Unmatched right-side columns get NULL.
 
 ```
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
@@ -73,7 +73,7 @@ LEFT JOIN orders o ON c.customer_id = o.customer_id;
 
 Here, all customers are included, with NULLS for Dana and Eve's orders. Unmatched orders (like 104) are dropped. 
 
-#### 4. FULL OUTER JOIN: Everything, Everywhere
+### 4. FULL OUTER JOIN: Everything, Everywhere
 A FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there's no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it's emulated with UNION of LEFT and RIGHT joins.)
 
 ```
@@ -94,7 +94,9 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;
 
 This shows everything: matched rows, plus unmatched customers (4,5) and the unmatched order (104). 
 
-##### 5. Comparing Join Results
+### 5. Comparing Join Results
+
+This table depicts a summary about SQL Joins based off of the examples we used. 
 
 | Join Type       | Rows Returned | Includes Unmatched Left? | Includes Unmatched Right? | Use Case Example                  |
 |-----------------|---------------|--------------------------|---------------------------|-----------------------------------|
@@ -102,5 +104,31 @@ This shows everything: matched rows, plus unmatched customers (4,5) and the unma
 | LEFT JOIN       | 6             | Yes (with NULLs)         | No                        | Analyze all customers, including those without orders |
 | FULL OUTER JOIN | 7             | Yes (with NULLs)         | Yes (with NULLs)          | Audit all data, spotting orphans in either table |
 
-### CALL TO ACTION
+### Call to Action
 
+## Zoo Animals Table
+This table lists animals in a zoo, with `animal_id` as the primary key.
+
+| animal_id | name      | species      |
+|-----------|-----------|--------------|
+| 1         | Leo       | Lion         |
+| 2         | Ellie     | Elephant     |
+| 3         | Gina      | Giraffe      |
+| 4         | Penny     | Penguin      |
+| 5         | Toby      | Tiger        |
+
+## Exhibits Table
+This table lists exhibit assignments, with `animal_id` as a foreign key referencing the `zoo_animals` table.
+
+| exhibit_id | animal_id | exhibit_name | area_sqft |
+|------------|-----------|--------------|-----------|
+| 101        | 1         | Savanna      | 5000      |
+| 102        | 3         | Tall Plains  | 3000      |
+| 103        | 1         | Big Cats     | 2000      |
+| 104        | 6         | Jungle       | 4000      |
+| 105        | 2         | Elephant Enclosure | 6000 |
+
+**Notes for Practice**:
+- `animal_id` 6 in the `exhibits` table has no match in `zoo_animals` (unmatched right).
+- Animals like Penny (4) and Toby (5) in `zoo_animals` have no exhibits (unmatched left).
+- Use these tables to practice joins in an SQL editor like [DB-Fiddle](https://www.db-fiddle.com/) by creating them with `CREATE TABLE` and `INSERT` statements, similar to the SQL snippets in the previous tutorial.
