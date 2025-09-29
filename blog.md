@@ -105,7 +105,7 @@ This table depicts a summary about SQL Joins based off of the examples we used.
 
 ## Call to Action
 
-## Zoo Animals Table
+### Zoo Animals Table
 This table lists animals in a zoo, with `animal_id` as the primary key.
 
 | animal_id | name      | species      |
@@ -116,7 +116,7 @@ This table lists animals in a zoo, with `animal_id` as the primary key.
 | 4         | Penny     | Penguin      |
 | 5         | Toby      | Tiger        |
 
-## Exhibits Table
+### Exhibits Table
 This table lists exhibit assignments, with `animal_id` as a foreign key referencing the `zoo_animals` table.
 
 | exhibit_id | animal_id | exhibit_name | area_sqft |
