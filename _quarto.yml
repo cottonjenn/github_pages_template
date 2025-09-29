@@ -13,6 +13,8 @@ website:
         href: index.md
       - text: "About Me"
         href: about.md
+      - text: "Blog"  # New Blog tab added here
+        href: blog.md
       - text: "Projects"
         menu:
           - text: "All Projects"
@@ -26,9 +28,9 @@ website:
             href: projects/final-project.qmd
     right:
       - icon: github
-        href: https://github.com/your-username
+        href: https://github.com/cottonjenn
       - icon: linkedin
-        href: https://linkedin.com/in/your-profile
+        href: https://www.linkedin.com/in/jenna-worthen-b9a8b2299/
 
   sidebar:
     - title: "Projects"
