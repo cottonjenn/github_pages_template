@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my data science portfolio! This site shows my journey learning data science and analytics. Here you’ll find projects that demonstrate what I’ve learned and discovered.\n\n\nThis portfolio shows my work learning data science. Each project includes:\n\nMy code with documentation\nVisualizations I created\nWhat I learned and discovered\n\nI built this site using Quarto and host it on GitHub Pages.\n\n\n\n\nProgramming: Python, Pandas for data analysis\nVisualization: Creating charts with Matplotlib and Seaborn\nData Collection: Getting data from files, websites, and APIs\nAnalysis: Finding patterns and answering questions with data\n\n\n\n\n\n\n\nLearn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
+  },
+  {
+    "objectID": "index.html#about-this-portfolio",
+    "href": "index.html#about-this-portfolio",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "This portfolio shows my work learning data science. Each project includes:\n\nMy code with documentation\nVisualizations I created\nWhat I learned and discovered\n\nI built this site using Quarto and host it on GitHub Pages."
+  },
+  {
+    "objectID": "index.html#skills-im-learning",
+    "href": "index.html#skills-im-learning",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Programming: Python, Pandas for data analysis\nVisualization: Creating charts with Matplotlib and Seaborn\nData Collection: Getting data from files, websites, and APIs\nAnalysis: Finding patterns and answering questions with data"
+  },
+  {
+    "objectID": "index.html#my-projects",
+    "href": "index.html#my-projects",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Learn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "SQL Diagram\nHere are relevant images from a search for fun, colorful graphics illustrating SQL joins (focusing on INNER, LEFT, and OUTER types). I’ve selected the top 5 that use engaging visuals like Venn diagrams and cartoons for better understanding in your data science tutorial. Each is sized reasonably (SMALL for supplementary use, LARGE for the key illustrative one) and includes optional captions where helpful."
+  },
+  {
+    "objectID": "blog.html#problem-statement",
+    "href": "blog.html#problem-statement",
+    "title": "Blog",
+    "section": "Problem Statement",
+    "text": "Problem Statement\nIn data science, combining data from multiple tables is common, but choosing the wrong SQL join can lead to incomplete or misleading results. This tutorial helps students understand how INNER, LEFT, and FULL OUTER joins affect outcomes when merging tables (e.g., customers and orders), and guides on selecting the right join for analysis tasks."
+  },
+  {
+    "objectID": "blog.html#key-stepssections",
+    "href": "blog.html#key-stepssections",
+    "title": "Blog",
+    "section": "Key Steps/Sections",
+    "text": "Key Steps/Sections\n\n1. Setup: Two Simple Tables\nLet’s start with two basic tables to illustrate joins. Imagine we have a customers table (with customer details) and an orders table (with purchase records). We’ll use a primary key (customer_id) in customers that acts as a foreign key in orders. For this static tutorial, we’ll define the tables directly as Markdown tables below. In a real SQL environment (like SQLite, MySQL, or PostgreSQL), you would create these tables using CREATE TABLE and INSERT statements.\nCustomers Table:\n\n\n\ncustomer_id\nname\nemail\n\n\n\n\n1\nAlice\nalice@email.com\n\n\n2\nBob\nbob@email.com\n\n\n3\nCharlie\ncharlie@email.com\n\n\n4\nDana\ndana@email.com\n\n\n5\nEve\neve@email.com\n\n\n\nOrders Table:\n\n\n\norder_id\ncustomer_id\nproduct\namount\n\n\n\n\n101\n1\nLaptop\n1200.0\n\n\n102\n2\nPhone\n800.0\n\n\n103\n1\nTablet\n300.0\n\n\n104\n6\nMonitor\n200.0\n\n\n105\n3\nKeyboard\n50.0\n\n\n\n\n\n2. INNER JOIN: Matching Only\nAn INNER JOIN returns only rows where there’s a match in both tables based on the join condition (e.g., customer_id).\nSELECT c.customer_id, c.name, o.order_id, o.product, o.amount\nFROM customers c\nINNER JOIN orders o ON c.customer_id = o.customer_id;\nExpected Result:\n\n\n\ncustomer_id\nname\norder_id\nproduct\namount\n\n\n\n\n1\nAlice\n101\nLaptop\n1200.0\n\n\n1\nAlice\n103\nTablet\n300.0\n\n\n2\nBob\n102\nPhone\n800.0\n\n\n3\nCharlie\n105\nKeyboard\n50.0\n\n\n\nNotice: Only matched customers (1,2,3) appear; Dana (4), Eve (5), and the unmatched order (104 for customer 6) are excluded.\n\n\n3. LEFT JOIN: Keep All from Left\nA LEFT JOIN keeps all rows from the left table (customers), with matching rows from the right (orders). Unmatched right-side columns get NULL.\nSELECT c.customer_id, c.name, o.order_id, o.product, o.amount\nFROM customers c\nLEFT JOIN orders o ON c.customer_id = o.customer_id;\n\n\n\ncustomer_id\nname\norder_id\nproduct\namount\n\n\n\n\n1\nAlice\n101\nLaptop\n1200.0\n\n\n1\nAlice\n103\nTablet\n300.0\n\n\n2\nBob\n102\nPhone\n800.0\n\n\n3\nCharlie\n105\nKeyboard\n50.0\n\n\n4\nDana\nNone\nNone\nNone\n\n\n5\nEve\nNone\nNone\nNone\n\n\n\nHere, all customers are included, with NULLS for Dana and Eve’s orders. Unmatched orders (like 104) are dropped.\n\n\n4. FULL OUTER JOIN: Everything, Everywhere\nA FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there’s no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it’s emulated with UNION of LEFT and RIGHT joins.)\nSELECT c.customer_id, c.name, o.order_id, o.product, o.amount\nFROM customers c\nFULL OUTER JOIN orders o ON c.customer_id = o.customer_id;\n\n\n\ncustomer_id\nname\norder_id\nproduct\namount\n\n\n\n\n1\nAlice\n101\nLaptop\n1200.0\n\n\n1\nAlice\n103\nTablet\n300.0\n\n\n2\nBob\n102\nPhone\n800.0\n\n\n3\nCharlie\n105\nKeyboard\n50.0\n\n\n4\nDana\nNone\nNone\nNone\n\n\n5\nEve\nNone\nNone\nNone\n\n\n6\nNone\n104\nMonitor\n200.0\n\n\n\nThis shows everything: matched rows, plus unmatched customers (4,5) and the unmatched order (104).\n\n\n5. Comparing Join Results\nThis table depicts a summary about SQL Joins based off of the examples we used.\n\n\n\n\n\n\n\n\n\n\nJoin Type\nRows Returned\nIncludes Unmatched Left?\nIncludes Unmatched Right?\nUse Case Example\n\n\n\n\nINNER JOIN\n4\nNo\nNo\nGet only customers with orders\n\n\nLEFT JOIN\n6\nYes (with NULLs)\nNo\nAnalyze all customers, including those without orders\n\n\nFULL OUTER JOIN\n7\nYes (with NULLs)\nYes (with NULLs)\nAudit all data, spotting orphans in either table"
+  },
+  {
+    "objectID": "blog.html#call-to-action",
+    "href": "blog.html#call-to-action",
+    "title": "Blog",
+    "section": "Call to Action",
+    "text": "Call to Action\n\nZoo Animals Table\nThis table lists animals in a zoo, with animal_id as the primary key.\n\n\n\nanimal_id\nname\nspecies\n\n\n\n\n1\nLeo\nLion\n\n\n2\nEllie\nElephant\n\n\n3\nGina\nGiraffe\n\n\n4\nPenny\nPenguin\n\n\n5\nToby\nTiger\n\n\n\n\n\nExhibits Table\nThis table lists exhibit assignments, with animal_id as a foreign key referencing the zoo_animals table.\n\n\n\nexhibit_id\nanimal_id\nexhibit_name\narea_sqft\n\n\n\n\n101\n1\nSavanna\n5000\n\n\n102\n3\nTall Plains\n3000\n\n\n103\n1\nBig Cats\n2000\n\n\n104\n6\nJungle\n4000\n\n\n105\n2\nElephant Enclosure\n6000\n\n\n\nNotes for Practice: - animal_id 6 in the exhibits table has no match in zoo_animals (unmatched right). - Animals like Penny (4) and Toby (5) in zoo_animals have no exhibits (unmatched left). - Use these tables to practice joins in an SQL editor like DB-Fiddle by creating them with CREATE TABLE and INSERT statements, similar to the SQL snippets in the previous tutorial."
+  }
+]
