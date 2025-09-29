@@ -44,12 +44,12 @@ INNER JOIN orders o ON c.customer_id = o.customer_id;
 
 **Expected Result:**
 
-|   | customer_id | name    | order_id | product  | amount |
-|---|-------------|---------|----------|----------|--------|
-| 0 | 1           | Alice   | 101      | Laptop   | 1200.0 |
-| 1 | 1           | Alice   | 103      | Tablet   | 300.0  |
-| 2 | 2           | Bob     | 102      | Phone    | 800.0  |
-| 3 | 3           | Charlie | 105      | Keyboard | 50.0   |
+| customer_id | name    | order_id | product  | amount |
+|-------------|---------|----------|----------|--------|
+| 1           | Alice   | 101      | Laptop   | 1200.0 |
+| 1           | Alice   | 103      | Tablet   | 300.0  |
+| 2           | Bob     | 102      | Phone    | 800.0  |
+| 3           | Charlie | 105      | Keyboard | 50.0   |
 
 Notice: Only matched customers (1,2,3) appear; Dana (4), Eve (5), and the unmatched order (104 for customer 6) are excluded.
 
@@ -62,14 +62,14 @@ FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id;
 ```
 
-|   | customer_id | name    | order_id | product  | amount |
-|---|-------------|---------|----------|----------|--------|
-| 0 | 1           | Alice   | 101      | Laptop   | 1200.0 |
-| 1 | 1           | Alice   | 103      | Tablet   | 300.0  |
-| 2 | 2           | Bob     | 102      | Phone    | 800.0  |
-| 3 | 3           | Charlie | 105      | Keyboard | 50.0   |
-| 4 | 4           | Dana    | None     | None     | None   |
-| 5 | 5           | Eve     | None     | None     | None   |
+| customer_id | name    | order_id | product  | amount |
+|-------------|---------|----------|----------|--------|
+| 1           | Alice   | 101      | Laptop   | 1200.0 |
+| 1           | Alice   | 103      | Tablet   | 300.0  |
+| 2           | Bob     | 102      | Phone    | 800.0  |
+| 3           | Charlie | 105      | Keyboard | 50.0   |
+| 4           | Dana    | None     | None     | None   |
+| 5           | Eve     | None     | None     | None   |
 
 Here, all customers are included, with NULLS for Dana and Eve's orders. Unmatched orders (like 104) are dropped. 
 
@@ -82,15 +82,15 @@ FROM customers c
 FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;
 ```
 
-|   | customer_id | name    | order_id | product  | amount |
-|---|-------------|---------|----------|----------|--------|
-| 0 | 1           | Alice   | 101      | Laptop   | 1200.0 |
-| 1 | 1           | Alice   | 103      | Tablet   | 300.0  |
-| 2 | 2           | Bob     | 102      | Phone    | 800.0  |
-| 3 | 3           | Charlie | 105      | Keyboard | 50.0   |
-| 4 | 4           | Dana    | None     | None     | None   |
-| 5 | 5           | Eve     | None     | None     | None   |
-| 6 | 6           | None    | 104      | Monitor  | 200.0  |
+| customer_id | name    | order_id | product  | amount |
+|-------------|---------|----------|----------|--------|
+| 1           | Alice   | 101      | Laptop   | 1200.0 |
+| 1           | Alice   | 103      | Tablet   | 300.0  |
+| 2           | Bob     | 102      | Phone    | 800.0  |
+| 3           | Charlie | 105      | Keyboard | 50.0   |
+| 4           | Dana    | None     | None     | None   |
+| 5           | Eve     | None     | None     | None   |
+| 6           | None    | 104      | Monitor  | 200.0  |
 
 This shows everything: matched rows, plus unmatched customers (4,5) and the unmatched order (104). 
 
