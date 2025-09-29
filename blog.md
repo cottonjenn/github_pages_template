@@ -1,6 +1,9 @@
 ---
 title: "Blog"
 ---
+![SQL Diagram](sql image.jpg)
+
+*Here are relevant images from a search for fun, colorful graphics illustrating SQL joins (focusing on INNER, LEFT, and OUTER types). I've selected the top 5 that use engaging visuals like Venn diagrams and cartoons for better understanding in your data science tutorial. Each is sized reasonably (SMALL for supplementary use, LARGE for the key illustrative one) and includes optional captions where helpful.*
 
 # SQL Joins Demystified: INNER, LEFT, and OUTER in Action
 
