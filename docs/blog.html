@@ -202,9 +202,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#full-outer-join-everything-everywhere" id="toc-full-outer-join-everything-everywhere" class="nav-link" data-scroll-target="#full-outer-join-everything-everywhere">4. FULL OUTER JOIN: Everything, Everywhere</a></li>
   <li><a href="#comparing-join-results" id="toc-comparing-join-results" class="nav-link" data-scroll-target="#comparing-join-results">5. Comparing Join Results</a></li>
   </ul></li>
-  <li><a href="#call-to-action" id="toc-call-to-action" class="nav-link" data-scroll-target="#call-to-action">Call to Action</a></li>
+  <li><a href="#call-to-action" id="toc-call-to-action" class="nav-link" data-scroll-target="#call-to-action">Call to Action</a>
+  <ul class="collapse">
   <li><a href="#zoo-animals-table" id="toc-zoo-animals-table" class="nav-link" data-scroll-target="#zoo-animals-table">Zoo Animals Table</a></li>
   <li><a href="#exhibits-table" id="toc-exhibits-table" class="nav-link" data-scroll-target="#exhibits-table">Exhibits Table</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -554,9 +556,8 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 </section>
 <section id="call-to-action" class="level2">
 <h2 class="anchored" data-anchor-id="call-to-action">Call to Action</h2>
-</section>
-<section id="zoo-animals-table" class="level2">
-<h2 class="anchored" data-anchor-id="zoo-animals-table">Zoo Animals Table</h2>
+<section id="zoo-animals-table" class="level3">
+<h3 class="anchored" data-anchor-id="zoo-animals-table">Zoo Animals Table</h3>
 <p>This table lists animals in a zoo, with <code>animal_id</code> as the primary key.</p>
 <table class="caption-top table">
 <thead>
@@ -595,8 +596,8 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 </tbody>
 </table>
 </section>
-<section id="exhibits-table" class="level2">
-<h2 class="anchored" data-anchor-id="exhibits-table">Exhibits Table</h2>
+<section id="exhibits-table" class="level3">
+<h3 class="anchored" data-anchor-id="exhibits-table">Exhibits Table</h3>
 <p>This table lists exhibit assignments, with <code>animal_id</code> as a foreign key referencing the <code>zoo_animals</code> table.</p>
 <table class="caption-top table">
 <thead>
@@ -645,6 +646,7 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 
 <!-- -->
 
+</section>
 </section>
 </section>
 
