@@ -2,7 +2,6 @@
 title: "Blog"
 ---
 
-# My Blog
 # SQL Joins Demystified: INNER, LEFT, and OUTER in Action
 
 ## Problem Statement
@@ -104,7 +103,7 @@ This table depicts a summary about SQL Joins based off of the examples we used.
 | LEFT JOIN       | 6             | Yes (with NULLs)         | No                        | Analyze all customers, including those without orders |
 | FULL OUTER JOIN | 7             | Yes (with NULLs)         | Yes (with NULLs)          | Audit all data, spotting orphans in either table |
 
-### Call to Action
+## Call to Action
 
 ## Zoo Animals Table
 This table lists animals in a zoo, with `animal_id` as the primary key.
