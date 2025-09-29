@@ -14,6 +14,7 @@ Let's start with two basic tables to illustrate joins. Imagine we have a custome
 For this static tutorial, we'll define the tables directly as Markdown tables below. In a real SQL environment (like SQLite, MySQL, or PostgreSQL), you would create these tables using CREATE TABLE and INSERT statements.
 
 **Customers Table:**
+
 | customer_id | name     | email             |
 |-------------|----------|-------------------|
 | 1           | Alice    | alice@email.com   |
@@ -34,12 +35,15 @@ For this static tutorial, we'll define the tables directly as Markdown tables be
 
 #### 2. INNER JOIN: Matching Only
 An INNER JOIN returns only rows where there's a match in both tables based on the join condition (e.g., customer_id).
+
 ```
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
 FROM customers c
 INNER JOIN orders o ON c.customer_id = o.customer_id;
 ```
+
 **Expected Result:**
+
 |   | customer_id | name    | order_id | product  | amount |
 |---|-------------|---------|----------|----------|--------|
 | 0 | 1           | Alice   | 101      | Laptop   | 1200.0 |
@@ -71,6 +75,7 @@ Here, all customers are included, with NULLS for Dana and Eve's orders. Unmatche
 
 #### 4. FULL OUTER JOIN: Everything, Everywhere
 A FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there's no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it's emulated with UNION of LEFT and RIGHT joins.)
+
 ```
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
 FROM customers c
@@ -90,6 +95,7 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;
 This shows everything: matched rows, plus unmatched customers (4,5) and the unmatched order (104). 
 
 ##### 5. Comparing Join Results
+
 | Join Type       | Rows Returned | Includes Unmatched Left? | Includes Unmatched Right? | Use Case Example                  |
 |-----------------|---------------|--------------------------|---------------------------|-----------------------------------|
 | INNER JOIN      | 4             | No                       | No                        | Get only customers with orders    |
