@@ -48,7 +48,7 @@ For this static tutorial, we'll define the tables directly as Markdown tables be
 ### 2. INNER JOIN: Matching Only
 An INNER JOIN returns only rows where there's a match in both tables based on the join condition (e.g., `customer_id`).
 
-```
+```sql
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
 FROM customers c
 INNER JOIN orders o ON c.customer_id = o.customer_id;
@@ -68,7 +68,7 @@ Notice: Only matched customers (1,2,3) appear; Dana (4), Eve (5), and the unmatc
 ### 3. LEFT JOIN: Keep All from Left
 A LEFT JOIN keeps all rows from the left table (`customers`), with matching rows from the right (`orders`). Unmatched right-side columns get NULL.
 
-```
+```sql
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
 FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id;
@@ -88,7 +88,7 @@ Here, all customers are included, with NULLS for Dana and Eve's orders. Unmatche
 ### 4. FULL OUTER JOIN: Everything, Everywhere
 A FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there's no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it's emulated with UNION of LEFT and RIGHT joins.)
 
-```
+```sql
 SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
 FROM customers c
 FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;

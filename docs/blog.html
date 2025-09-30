@@ -346,9 +346,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="inner-join-matching-only" class="level3">
 <h3 class="anchored" data-anchor-id="inner-join-matching-only">2. INNER JOIN: Matching Only</h3>
 <p>An INNER JOIN returns only rows where there’s a match in both tables based on the join condition (e.g., <code>customer_id</code>).</p>
-<pre><code>SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
-FROM customers c
-INNER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c.customer_id, c.name, o.order_id, o.product, o.amount</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c.customer_id <span class="op">=</span> o.customer_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Expected Result:</strong></p>
 <table class="caption-top table">
 <thead>
@@ -396,9 +396,9 @@ INNER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 <section id="left-join-keep-all-from-left" class="level3">
 <h3 class="anchored" data-anchor-id="left-join-keep-all-from-left">3. LEFT JOIN: Keep All from Left</h3>
 <p>A LEFT JOIN keeps all rows from the left table (<code>customers</code>), with matching rows from the right (<code>orders</code>). Unmatched right-side columns get NULL.</p>
-<pre><code>SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
-FROM customers c
-LEFT JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c.customer_id, c.name, o.order_id, o.product, o.amount</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c.customer_id <span class="op">=</span> o.customer_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -459,9 +459,9 @@ LEFT JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 <section id="full-outer-join-everything-everywhere" class="level3">
 <h3 class="anchored" data-anchor-id="full-outer-join-everything-everywhere">4. FULL OUTER JOIN: Everything, Everywhere</h3>
 <p>A FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there’s no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it’s emulated with UNION of LEFT and RIGHT joins.)</p>
-<pre><code>SELECT c.customer_id, c.name, o.order_id, o.product, o.amount
-FROM customers c
-FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c.customer_id, c.name, o.order_id, o.product, o.amount</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FULL</span> <span class="kw">OUTER</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c.customer_id <span class="op">=</span> o.customer_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1170,10 +1170,10 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 <span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. INNER JOIN: Matching Only</span></span>
 <span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>An INNER JOIN returns only rows where there's a match in both tables based on the join condition (e.g., <span class="in">`customer_id`</span>).</span>
 <span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="in">SELECT c.customer_id, c.name, o.order_id, o.product, o.amount</span></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="in">FROM customers c</span></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="in">INNER JOIN orders o ON c.customer_id = o.customer_id;</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c<span class="ch">.</span>customer_id, c<span class="ch">.</span>name, o<span class="ch">.</span>order_id, o<span class="ch">.</span>product, o<span class="ch">.</span>amount</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c<span class="ch">.</span>customer_id <span class="op">=</span> o<span class="ch">.</span>customer_id;</span>
 <span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>**Expected Result:**</span>
@@ -1190,10 +1190,10 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. LEFT JOIN: Keep All from Left</span></span>
 <span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>A LEFT JOIN keeps all rows from the left table (<span class="in">`customers`</span>), with matching rows from the right (<span class="in">`orders`</span>). Unmatched right-side columns get NULL.</span>
 <span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="in">SELECT c.customer_id, c.name, o.order_id, o.product, o.amount</span></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="in">FROM customers c</span></span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="in">LEFT JOIN orders o ON c.customer_id = o.customer_id;</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c<span class="ch">.</span>customer_id, c<span class="ch">.</span>name, o<span class="ch">.</span>order_id, o<span class="ch">.</span>product, o<span class="ch">.</span>amount</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c<span class="ch">.</span>customer_id <span class="op">=</span> o<span class="ch">.</span>customer_id;</span>
 <span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> customer_id <span class="pp">|</span> name    <span class="pp">|</span> order_id <span class="pp">|</span> product  <span class="pp">|</span> amount <span class="pp">|</span></span>
@@ -1210,10 +1210,10 @@ FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</code></pre>
 <span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. FULL OUTER JOIN: Everything, Everywhere</span></span>
 <span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>A FULL OUTER JOIN (or just OUTER JOIN in some dialects) includes all rows from both tables, with NULLs where there's no match. (Note: In SQLite, this is FULL OUTER JOIN; in MySQL, it's emulated with UNION of LEFT and RIGHT joins.)</span>
 <span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="in">SELECT c.customer_id, c.name, o.order_id, o.product, o.amount</span></span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="in">FROM customers c</span></span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="in">FULL OUTER JOIN orders o ON c.customer_id = o.customer_id;</span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="in">```sql</span></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c<span class="ch">.</span>customer_id, c<span class="ch">.</span>name, o<span class="ch">.</span>order_id, o<span class="ch">.</span>product, o<span class="ch">.</span>amount</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>FULL <span class="kw">OUTER</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> c<span class="ch">.</span>customer_id <span class="op">=</span> o<span class="ch">.</span>customer_id;</span>
 <span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> customer_id <span class="pp">|</span> name    <span class="pp">|</span> order_id <span class="pp">|</span> product  <span class="pp">|</span> amount <span class="pp">|</span></span>
