@@ -4,44 +4,52 @@ title: "About Me"
 
 ## Background
 
-Write a brief introduction about yourself here. Include:
-
-- Your academic background
-- Your interest in data science
-- Your career goals
-- Any relevant experience or projects
+- **NFL Big Data Bowl 2026 Mentee**
+    - Met with advisors from the NFL biweekly
+    - Prepared predictive analytic competition submission in R (current project so more information to come)
+- **University of Utah Athletics Project:**
+    - Built an R Shiny dashboard to visualize longitudinal strength data for coaches
+    - Applied mixed models and integrated athlete monitoring tools (VALD, CATAPULT)
+    - Delivered weekly presentations to stakeholders and mentors
+- **Golf Analytics Research at BYU:**
+    - Georeferenced maps and indivdual data points in ARCGIS
+    - Estimated strokes-to-hole from any course location using ArcGIS and advanced statistical modeling
+    - Quantified uncertainty in predictions and visualized spatial variability in R
+- **Teaching & Mentorship:**
+    - Developed Python-based learning modules for engineering and science students
+    - TA for multiple statistics courses, supporting students in labs and lectures
+- **Languages:** Fluent in English and Spanish
 
 ## Education
 
 - **[Statistics: Data Science]** - Brigham Young University, 2026
-- **Relevant Coursework**: Statistics, Data Analysis, Programming, etc.
+- **Relevant Coursework**: Statistical Modeling, Data Visualization, Data Wrangling, Bayesian Statistics, Predictive Analytics, Machine Learning, Data Science Ecosystems, Analysis of Correlated Data, Computer Science and Data Structures 
 
 ## Skills & Interests
 
 ### Technical Skills
-- **Programming**: Python
-- **Data Analysis**: Pandas, NumPy
+- **Programming**: Python, R, SQL, HTML, Linux
+- **Data Analysis**: Pandas, NumPy, 
 - **Visualization**: Matplotlib, Seaborn
 - **Machine Learning**: Scikit-learn
-- **Tools**: Jupyter Notebooks, Git/GitHub
+- **Tools**: Jupyter Notebooks, Git/GitHub, Tableau, ArcGIS
 
 ### Areas of Interest
-- [Your specific interests, e.g., environmental data, healthcare analytics, finance, etc.]
-- [Other areas you're curious about]
+- Sports (Knowledge of Game Rules and Regulations: Rugby, Volleyball, Football, Tennis, Golf)
+- Energy Systems and Consumption
+- Humanitarian Aid
+- Crime Analysis
 
 ## Goals
 
-Describe what you hope to achieve through your data science journey:
-
-- Short-term learning objectives
-- Long-term career aspirations
-- Types of problems you want to solve
+- Drive strategy and performance insights in sports science and analytics through rigorous, creative data modeling
+- Focus on uncovering patterns in sports performance and building reproducible, transparent analytics workflows
 
 ## Contact
 
-- **Email**: your.email@example.com
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+- **Email**: worthenj.281@gmail.com
+- **GitHub**: [github.com/cottinjenn](https://github.com/cottonjenn)
+- **LinkedIn**: [linkedin.com/in/jenna-worthen-b9a8b2299](https://www.linkedin.com/in/jenna-worthen-b9a8b2299/)
 
 ---
 
