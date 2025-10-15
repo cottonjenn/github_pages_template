@@ -4,26 +4,23 @@ title: "Welcome to My Data Science Portfolio"
 
 # Hello! I'm Jenna 👋
 
-Welcome to my data science portfolio! This site shows my journey learning data science and analytics. Here you'll find projects that demonstrate what I've learned and discovered.
+Welcome to my data science portfolio! 
 
-## 🎓 About This Portfolio
+I'm a Statistics and Data Science major at BYU from Houston, Texas.
+This site shows my journey learning data science and analytics. Here you'll find projects that demonstrate what I've learned and discovered.
 
-This portfolio shows my work learning data science. Each project includes:
+Check out the About Me tab to know more about me and my background. 
 
-- My code with documentation
-- Visualizations I created
-- What I learned and discovered
+## Overview
+
+This portfolio shows my work learning data science which includes:
+
+- Tutorial Blog made in markdown explaining a simple SQL topic for Data Science
+- Projects in my Data Science class (BYU Stat 386) coded in Python and markdown
 
 I built this site using [Quarto](https://quarto.org/) and host it on [GitHub Pages](https://pages.github.com/).
 
-## 🛠️ Skills I'm Learning
-
-- **Programming**: Python, Pandas for data analysis
-- **Visualization**: Creating charts with Matplotlib and Seaborn
-- **Data Collection**: Getting data from files, websites, and APIs
-- **Analysis**: Finding patterns and answering questions with data
-
-## 📈 My Projects
+## My Projects
 
 ::: {.grid}
 

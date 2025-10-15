@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome to My Data Science Portfolio",
     "section": "",
-    "text": "Welcome to my data science portfolio! This site shows my journey learning data science and analytics. Here you’ll find projects that demonstrate what I’ve learned and discovered.\n\n\nThis portfolio shows my work learning data science. Each project includes:\n\nMy code with documentation\nVisualizations I created\nWhat I learned and discovered\n\nI built this site using Quarto and host it on GitHub Pages.\n\n\n\n\nProgramming: Python, Pandas for data analysis\nVisualization: Creating charts with Matplotlib and Seaborn\nData Collection: Getting data from files, websites, and APIs\nAnalysis: Finding patterns and answering questions with data\n\n\n\n\n\n\n\nLearn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
+    "text": "Welcome to my data science portfolio!\nI’m a Statistics and Data Science major at BYU from Houston, Texas. This site shows my journey learning data science and analytics. Here you’ll find projects that demonstrate what I’ve learned and discovered.\nCheck out the About Me tab to know more about me and my background.\n\n\nThis portfolio shows my work learning data science which includes:\n\nTutorial Blog made in markdown explaining a simple SQL topic for Data Science\nProjects in my Data Science class (BYU Stat 386) coded in Python and markdown\n\nI built this site using Quarto and host it on GitHub Pages.\n\n\n\n\n\n\nLearn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
   },
   {
     "objectID": "index.html#about-this-portfolio",
@@ -103,5 +103,12 @@
     "title": "About Me",
     "section": "Get to know me",
     "text": "Get to know me\n\nI love to play sports, paint, and do wedding makeup and hair.\nFrom Houston, Texas"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "This portfolio shows my work learning data science which includes:\n\nTutorial Blog made in markdown explaining a simple SQL topic for Data Science\nProjects in my Data Science class (BYU Stat 386) coded in Python and markdown\n\nI built this site using Quarto and host it on GitHub Pages."
   }
 ]
