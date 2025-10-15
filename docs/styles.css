@@ -16,6 +16,16 @@
   font-size: 1.2rem;
 }
 
+.top-right-fixed{
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  width: 200px;
+  max-width: 20%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
 .navbar-nav .nav-link {
   font-weight: 500;
 }

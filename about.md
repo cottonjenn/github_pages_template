@@ -1,6 +1,15 @@
 ---
 title: "About Me"
+format:
+    html:
+        css: styles.css
 ---
+![](JWorthen_Headshot.jpg){.top-right-fixed}
+
+## Education
+
+- **Statistics: Data Science** - Brigham Young University, 2026
+- **Relevant Coursework**: Statistical Modeling, Data Visualization, Data Wrangling, Bayesian Statistics, Predictive Analytics, Machine Learning, Data Science Ecosystems, Analysis of Correlated Data, Computer Science and Data Structures 
 
 ## Background
 
@@ -20,11 +29,6 @@ title: "About Me"
     - TA for multiple statistics courses, supporting students in labs and lectures
 - **Languages:** Fluent in English and Spanish
 
-## Education
-
-- **[Statistics: Data Science]** - Brigham Young University, 2026
-- **Relevant Coursework**: Statistical Modeling, Data Visualization, Data Wrangling, Bayesian Statistics, Predictive Analytics, Machine Learning, Data Science Ecosystems, Analysis of Correlated Data, Computer Science and Data Structures 
-
 ## Skills & Interests
 
 ### Technical Skills
@@ -40,10 +44,10 @@ title: "About Me"
 - Humanitarian Aid
 - Crime Analysis
 
-## Goals
+## Get to know me
 
-- Drive strategy and performance insights in sports science and analytics through rigorous, creative data modeling
-- Focus on uncovering patterns in sports performance and building reproducible, transparent analytics workflows
+- I love to play sports, paint, and do wedding makeup and hair. 
+- From Houston, Texas
 
 ## Contact
 
