@@ -81,7 +81,7 @@
     "href": "about.html#skills-interests",
     "title": "About Me",
     "section": "Skills & Interests",
-    "text": "Skills & Interests\n\nTechnical Skills\n\nProgramming: Python, R, SQL, HTML, Linux\nData Analysis: Pandas, NumPy,\nVisualization: Matplotlib, Seaborn\nMachine Learning: Scikit-learn\nTools: Jupyter Notebooks, Git/GitHub, Tableau, ArcGIS\n\n\n\nAreas of Interest\n\nSports (Knowledge of Game Rules and Regulations: Rugby, Volleyball, Football, Tennis, Golf)\nEnergy Systems and Consumption\nHumanitarian Aid\nCrime Analysis"
+    "text": "Skills & Interests\n\nTechnical Skills\n\nProgramming: Python, R, SQL, HTML, Linux\nData Analysis: Pandas, NumPy, DataExplorer, Dplyr, Tidyr, Corrplot\nVisualization: Matplotlib, Seaborn, Ggplot2, Leaflet, Plotly\nPredictive Analytics: Regression Trees, BART, Random Forest, Penalized Linear and Logistic Regression, Stacked Ensembles\nMachine Learning: Scikit-learn, Tidy-Models, Keras, TensorFlow\nTools: Jupyter Notebooks, Git/GitHub, Tableau, ArcGIS\n\n\n\nAreas of Interest\n\nSports (Knowledge of Game Rules and Regulations: Rugby, Volleyball, Football, Tennis, Golf)\nEnergy Systems and Consumption\nHumanitarian Aid\nCrime Analysis"
   },
   {
     "objectID": "about.html#goals",

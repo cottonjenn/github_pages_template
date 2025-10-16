@@ -33,9 +33,10 @@ format:
 
 ### Technical Skills
 - **Programming**: Python, R, SQL, HTML, Linux
-- **Data Analysis**: Pandas, NumPy, 
-- **Visualization**: Matplotlib, Seaborn
-- **Machine Learning**: Scikit-learn
+- **Data Analysis**: Pandas, NumPy, DataExplorer, Dplyr, Tidyr, Corrplot
+- **Visualization**: Matplotlib, Seaborn, Ggplot2, Leaflet, Plotly
+- **Predictive Analytics**: Regression Trees, BART, Random Forest, Penalized Linear and Logistic Regression, Stacked Ensembles
+- **Machine Learning**: Scikit-learn, Tidy-Models, Keras, TensorFlow
 - **Tools**: Jupyter Notebooks, Git/GitHub, Tableau, ArcGIS
 
 ### Areas of Interest
